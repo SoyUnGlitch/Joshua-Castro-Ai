@@ -1,10 +1,13 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>joshuacastro.ai - Taller de IA</title>
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Montserrat:wght@400;600;700&family=Source+Code+Pro:wght@400;600&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Montserrat:wght@400;600;700&family=Source+Code+Pro:wght@400;600&display=swap"
+        rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -34,25 +37,45 @@
             font-weight: normal;
             font-style: normal;
         }
+
         .perspective {
             perspective: 1000px;
         }
+
         .event-card {
             transform-style: preserve-3d;
         }
+
         .event-card:hover {
             transform: rotateY(10deg) scale(1.05);
         }
+
         @keyframes float {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-10px); }
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-10px);
+            }
         }
+
         .animate-float {
             animation: float 6s ease-in-out infinite;
         }
+
         @keyframes float-icon {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-10px); }
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-10px);
+            }
         }
 
         .ai-tool-icon {
@@ -80,8 +103,17 @@
         }
 
         @keyframes pulse {
-            0%, 100% { transform: scale(1); opacity: 1; }
-            50% { transform: scale(1.1); opacity: 0.8; }
+
+            0%,
+            100% {
+                transform: scale(1);
+                opacity: 1;
+            }
+
+            50% {
+                transform: scale(1.1);
+                opacity: 0.8;
+            }
         }
 
         .ai-icon {
@@ -105,6 +137,7 @@
             position: relative;
             padding-bottom: 56.25%;
         }
+
         .aspect-w-16 iframe {
             position: absolute;
             top: 0;
@@ -117,14 +150,17 @@
             display: flex;
             transition: transform 0.5s ease;
         }
+
         .carousel-item {
             flex: 0 0 100%;
         }
+
         .flip-card {
             perspective: 1000px;
             width: 100%;
             height: 100%;
         }
+
         .flip-card-inner {
             position: relative;
             width: 100%;
@@ -133,38 +169,45 @@
             transition: transform 0.6s;
             transform-style: preserve-3d;
         }
+
         .flip-card.flipped .flip-card-inner {
             transform: rotateY(180deg);
         }
-        .flip-card-front, .flip-card-back {
+
+        .flip-card-front,
+        .flip-card-back {
             position: absolute;
             width: 100%;
             height: 100%;
             -webkit-backface-visibility: hidden;
             backface-visibility: hidden;
         }
+
         .flip-card-back {
             transform: rotateY(180deg);
         }
     </style>
     <!-- Meta Pixel Code -->
     <script>
-    !function(f,b,e,v,n,t,s)
-    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-    n.queue=[];t=b.createElement(e);t.async=!0;
-    t.src=v;s=b.getElementsByTagName(e)[0];
-    s.parentNode.insertBefore(t,s)}(window, document,'script',
-    'https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', '2188917394822413');
-    fbq('track', 'PageView');
+        !function (f, b, e, v, n, t, s) {
+            if (f.fbq) return; n = f.fbq = function () {
+                n.callMethod ?
+                n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+            };
+            if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+            n.queue = []; t = b.createElement(e); t.async = !0;
+            t.src = v; s = b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t, s)
+        }(window, document, 'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '2188917394822413');
+        fbq('track', 'PageView');
     </script>
     <noscript><img height="1" width="1" style="display:none"
-    src="https://www.facebook.com/tr?id=2188917394822413&ev=PageView&noscript=1"
-    /></noscript>
+            src="https://www.facebook.com/tr?id=2188917394822413&ev=PageView&noscript=1" /></noscript>
     <!-- End Meta Pixel Code -->
 </head>
+
 <body class="bg-background text-text font-sans">
     <header class="fixed w-full bg-background bg-opacity-90 z-50 border-b border-gray-200">
         <nav class="flex justify-between items-center p-4 max-w-7xl mx-auto">
@@ -173,16 +216,22 @@
             </div>
             <div class="space-x-8">
                 <a href="/coming-soon.html" class="text-sm font-medium hover:text-accent transition-colors">Blog</a>
-                <a href="https://boletos.boletera.net/e/soy-un-glitch/tickets" id="buy-tickets" class="text-sm font-medium bg-accent text-white px-4 py-2 rounded-full hover:bg-opacity-80 transition-colors">COMPRAR BOLETO</a>
+                <a href="https://boletos.boletera.net/e/soy-un-glitch/tickets" id="buy-tickets"
+                    class="text-sm font-medium bg-accent text-white px-4 py-2 rounded-full hover:bg-opacity-80 transition-colors">COMPRAR
+                    BOLETO</a>
             </div>
         </nav>
     </header>
     <main class="pt-16">
-        <section id="hero" class="relative text-center py-64 px-4 bg-cover bg-center bg-no-repeat" style="background-image: url('ICONS/hero.jpeg');">
+        <section id="hero" class="relative text-center py-64 px-4 bg-cover bg-center bg-no-repeat"
+            style="background-image: url('ICONS/hero.jpeg');">
             <div class="absolute inset-0 bg-black opacity-50"></div>
             <div class="max-w-4xl mx-auto relative z-10">
-                <p class="text-2xl mb-12 text-gray-200 font-source-code-pro">Aprender a usar la Inteligencia Artificial a tu favor como un Glitch</p>
-                <a href="https://boletos.boletera.net/e/soy-un-glitch/tickets" id="cta-button" class="bg-accent text-white px-12 py-4 text-xl font-bold rounded-full hover:bg-opacity-80 transition-colors uppercase">SEPARA TU ESPACIO AHORA</a>
+                <p class="text-2xl mb-12 text-gray-200 font-source-code-pro">Aprender a usar la Inteligencia Artificial
+                    a tu favor como un Glitch</p>
+                <a href="https://boletos.boletera.net/e/soy-un-glitch/tickets" id="cta-button"
+                    class="bg-accent text-white px-12 py-4 text-xl font-bold rounded-full hover:bg-opacity-80 transition-colors uppercase">SEPARA
+                    TU ESPACIO AHORA</a>
             </div>
         </section>
         <section id="ai-tools" class="py-16 px-4 bg-[#f5f8ff]">
@@ -235,21 +284,26 @@
                         <img src="ICONS/Module A.png" alt="Módulo A" class="w-full h-48 object-cover">
                         <div class="p-6">
                             <h3 class="text-xl font-semibold font-nebula mb-4">Módulo A: Prompting & Generar Texto</h3>
-                            <p class="font-source-code-pro mb-4 text-sm">Introducción a los conceptos básicos, aprende a como hablarle correctamente a la Inteligencia Artificial.</p>
+                            <p class="font-source-code-pro mb-4 text-sm">Introducción a los conceptos básicos, aprende a
+                                como hablarle correctamente a la Inteligencia Artificial.</p>
                         </div>
                     </div>
                     <div class="bg-[#0A2647] rounded-lg shadow-md overflow-hidden">
                         <img src="ICONS/Module B.png" alt="Módulo B" class="w-full h-48 object-cover">
                         <div class="p-6">
-                            <h3 class="text-xl font-semibold font-nebula mb-4">Módulo B: Generar Imágenes, Interpretar Data y Automatización</h3>
-                            <p class="font-source-code-pro mb-4 text-sm">Aprende a generar imágenes, videos, presentaciones, interpretar información y automatizar tus tareas.</p>
+                            <h3 class="text-xl font-semibold font-nebula mb-4">Módulo B: Generar Imágenes, Interpretar
+                                Data y Automatización</h3>
+                            <p class="font-source-code-pro mb-4 text-sm">Aprende a generar imágenes, videos,
+                                presentaciones, interpretar información y automatizar tus tareas.</p>
                         </div>
                     </div>
                     <div class="bg-[#0A2647] rounded-lg shadow-md overflow-hidden">
                         <img src="ICONS/Module C.png" alt="Módulo C" class="w-full h-48 object-cover">
                         <div class="p-6">
-                            <h3 class="text-xl font-semibold font-nebula mb-4">Módulo C: 'Deepfakes' & Protegerte de la IA</h3>
-                            <p class="font-source-code-pro mb-4 text-sm">Protege tu identidad y tus datos del uso abusivo de la IA.</p>
+                            <h3 class="text-xl font-semibold font-nebula mb-4">Módulo C: 'Deepfakes' & Protegerte de la
+                                IA</h3>
+                            <p class="font-source-code-pro mb-4 text-sm">Protege tu identidad y tus datos del uso
+                                abusivo de la IA.</p>
                         </div>
                     </div>
                     <div class="bg-[#0A2647] rounded-lg shadow-md overflow-hidden">
@@ -266,13 +320,19 @@
             <div class="max-w-5xl mx-auto">
                 <div class="flex flex-col md:flex-row items-center justify-between space-y-8 md:space-y-0 md:space-x-8">
                     <div class="w-full md:w-1/2">
-                        <h2 class="text-3xl font-bold font-nebula mb-4 text-left">Crea una compañía en 15 minutos con IA</h2>
-                        <p class="text-base mb-6 font-source-code-pro max-w-xl text-left">Descarga nuestra guía gratuita y aprende cómo la IA puede revolucionar tu proceso de creación de empresas.</p>
-                        <a href="https://boletos.boletera.net/e/soy-un-glitch/tickets" id="get-ticket" class="bg-accent text-white px-6 py-2 text-sm font-bold rounded-full hover:bg-opacity-80 transition-colors uppercase inline-block">DESCARGAR GUÍA GRATIS</a>
+                        <h2 class="text-3xl font-bold font-nebula mb-4 text-left">Crea una compañía en 15 minutos con IA
+                        </h2>
+                        <p class="text-base mb-6 font-source-code-pro max-w-xl text-left">Descarga nuestra guía gratuita
+                            y aprende cómo la IA puede revolucionar tu proceso de creación de empresas.</p>
+                        <a href="https://boletos.boletera.net/e/soy-un-glitch/tickets" id="get-ticket"
+                            class="bg-accent text-white px-6 py-2 text-sm font-bold rounded-full hover:bg-opacity-80 transition-colors uppercase inline-block">DESCARGAR
+                            GUÍA GRATIS</a>
                     </div>
                     <div class="w-full md:w-1/2">
                         <div class="aspect-w-16 aspect-h-9 rounded-lg overflow-hidden">
-                            <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe>
                         </div>
                     </div>
                 </div>
@@ -287,13 +347,18 @@
                     </div>
                     <div class="w-full md:w-1/2">
                         <p class="text-lg mb-6 font-source-code-pro">
-                            Prepárate para una experiencia única: serás transportado al año 2039 utilizando tecnología de IA de vanguardia. Joshua Castro, nuestro experto en IA, te guiará a través de este viaje fascinante.
+                            Prepárate para una experiencia única: serás transportado al año 2039 utilizando tecnología
+                            de IA de vanguardia. Joshua Castro, nuestro experto en IA, te guiará a través de este viaje
+                            fascinante.
                         </p>
                         <p class="text-lg mb-6 font-source-code-pro">
-                            Descubrirás cómo la IA ha transformado nuestro mundo y aprenderás las técnicas que Joshua utilizó para crear esta experiencia inmersiva. Este taller te dará una visión privilegiada de las posibilidades de la IA y cómo puede moldear nuestro futuro.
+                            Descubrirás cómo la IA ha transformado nuestro mundo y aprenderás las técnicas que Joshua
+                            utilizó para crear esta experiencia inmersiva. Este taller te dará una visión privilegiada
+                            de las posibilidades de la IA y cómo puede moldear nuestro futuro.
                         </p>
                         <p class="text-lg font-source-code-pro">
-                            No solo aprenderás sobre IA, vivirás el futuro de primera mano. ¡Prepárate para una aventura que desafiará tu percepción de la realidad y expandirá tu comprensión de la tecnología!
+                            No solo aprenderás sobre IA, vivirás el futuro de primera mano. ¡Prepárate para una aventura
+                            que desafiará tu percepción de la realidad y expandirá tu comprensión de la tecnología!
                         </p>
                     </div>
                 </div>
@@ -306,12 +371,14 @@
                     <div class="flex flex-col items-center text-center">
                         <img src="ICONS/book.jpeg" alt="Libro Digital" class="w-24 h-24 mb-4 rounded-full object-cover">
                         <h3 class="text-2xl font-semibold mb-4 font-nebula">Libro Digital</h3>
-                        <p class="font-source-code-pro">Recibirás un libro digital completo con todos los conceptos, ejemplos y recursos adicionales para que puedas seguir aprendiendo después del taller.</p>
+                        <p class="font-source-code-pro">Recibirás un libro digital completo con todos los conceptos,
+                            ejemplos y recursos adicionales para que puedas seguir aprendiendo después del taller.</p>
                     </div>
                     <div class="flex flex-col items-center text-center">
                         <img src="ICONS/AIs.jpg" alt="Tutor Personal" class="w-24 h-24 mb-4 rounded-full object-cover">
                         <h3 class="text-2xl font-semibold mb-4 font-nebula">Tutor Personal</h3>
-                        <p class="font-source-code-pro">Tendrs acceso a un programa de Inteligencia Artificial que te guiará durante todo el proceso de aprendizaje y responderá a tus preguntas específicas.</p>
+                        <p class="font-source-code-pro">Tendrs acceso a un programa de Inteligencia Artificial que te
+                            guiará durante todo el proceso de aprendizaje y responderá a tus preguntas específicas.</p>
                     </div>
                 </div>
             </div>
@@ -319,41 +386,55 @@
         <section id="event-info" class="py-16 px-4 bg-[#f5f8ff] text-primary">
             <div class="max-w-6xl mx-auto">
                 <h2 class="text-4xl font-bold font-nebula mb-12 text-center">¿Donde y cuando?</h2>
-                <div class="flex flex-col md:flex-row items-center justify-between space-y-8 md:space-y-0 md:space-x-12">
+                <div
+                    class="flex flex-col md:flex-row items-center justify-between space-y-8 md:space-y-0 md:space-x-12">
                     <div class="w-full md:w-1/2 perspective">
-                        <div class="event-card bg-gradient-to-br from-primary via-secondary to-accent p-1 rounded-3xl shadow-2xl transition-all duration-300 hover:shadow-accent/30">
+                        <div
+                            class="event-card bg-gradient-to-br from-primary via-secondary to-accent p-1 rounded-3xl shadow-2xl transition-all duration-300 hover:shadow-accent/30">
                             <img src="ICONS/Stage.jpeg" alt="Event Stage" class="w-full h-auto rounded-3xl">
                         </div>
                     </div>
                     <div class="w-full md:w-1/2 flex flex-col justify-center items-center space-y-8">
                         <div class="grid grid-cols-3 gap-8 w-full">
                             <div class="flex flex-col items-center text-center">
-                                <svg class="ai-icon w-16 h-16 mb-4" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <circle class="ai-icon-bg" cx="12" cy="12" r="11" fill="rgba(0, 113, 227, 0.1)"/>
-                                    <path d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <svg class="ai-icon w-16 h-16 mb-4" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <circle class="ai-icon-bg" cx="12" cy="12" r="11" fill="rgba(0, 113, 227, 0.1)" />
+                                    <path
+                                        d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
+                                        stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" />
                                 </svg>
                                 <h3 class="text-lg font-semibold mb-2 font-nebula">Fecha</h3>
                                 <p class="font-source-code-pro text-sm">25 de octubre de 2024</p>
                             </div>
                             <div class="flex flex-col items-center text-center">
-                                <svg class="ai-icon w-16 h-16 mb-4" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <circle class="ai-icon-bg" cx="12" cy="12" r="11" fill="rgba(0, 113, 227, 0.1)"/>
-                                    <path d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <svg class="ai-icon w-16 h-16 mb-4" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <circle class="ai-icon-bg" cx="12" cy="12" r="11" fill="rgba(0, 113, 227, 0.1)" />
+                                    <path d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" stroke="currentColor"
+                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                                 </svg>
                                 <h3 class="text-lg font-semibold mb-2 font-nebula">Hora</h3>
                                 <p class="font-source-code-pro text-sm">7:00 PM</p>
                             </div>
                             <div class="flex flex-col items-center text-center">
-                                <svg class="ai-icon w-16 h-16 mb-4" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <circle class="ai-icon-bg" cx="12" cy="12" r="11" fill="rgba(0, 113, 227, 0.1)"/>
-                                    <path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                    <path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <svg class="ai-icon w-16 h-16 mb-4" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <circle class="ai-icon-bg" cx="12" cy="12" r="11" fill="rgba(0, 113, 227, 0.1)" />
+                                    <path
+                                        d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
+                                        stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                    <path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" stroke="currentColor" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round" />
                                 </svg>
                                 <h3 class="text-lg font-semibold mb-2 font-nebula">Ubicación</h3>
                                 <p class="font-source-code-pro text-sm">C3tech, Caguas PR</p>
                             </div>
                         </div>
-                        <a href="https://boletos.boletera.net/e/soy-un-glitch/tickets" class="bg-accent text-white px-8 py-3 text-lg font-bold rounded-full hover:bg-opacity-80 transition-colors inline-block shadow-lg hover:shadow-accent/50 transform hover:-translate-y-1">
+                        <a href="https://boletos.boletera.net/e/soy-un-glitch/tickets"
+                            class="bg-accent text-white px-8 py-3 text-lg font-bold rounded-full hover:bg-opacity-80 transition-colors inline-block shadow-lg hover:shadow-accent/50 transform hover:-translate-y-1">
                             Consigue tu ticket
                         </a>
                     </div>
@@ -361,23 +442,48 @@
             </div>
         </section>
         <section id="speakers" class="py-16 px-4 max-w-6xl mx-auto">
-            <div class="flex flex-col md:flex-row-reverse items-center md:items-start space-y-8 md:space-y-0 md:space-x-8 md:space-x-reverse">
+            <div
+                class="flex flex-col md:flex-row-reverse items-center md:items-start space-y-8 md:space-y-0 md:space-x-8 md:space-x-reverse">
                 <div class="w-full md:w-1/2">
                     <img src="ICONS/Joshua Castro.jpg" alt="Joshua Castro" class="w-full h-auto rounded-lg shadow-lg">
                 </div>
                 <div class="w-full md:w-1/2">
                     <h3 class="text-3xl font-bold mb-4 font-nebula">Joshua Castro</h3>
-                    <p class="text-lg mb-6 font-source-code-pro">Joshua Castro es un especialista en inteligencia artificial que ha trabajado en este campo desde 2020, fundando una de las primeras empresas pioneras de IA en Puerto Rico. Ha creado la comunidad de inteligencia artificial más grande y de más rápido crecimiento en la isla, donde profesionales y entusiastas se reúnen para compartir conocimientos.</p>
-                    <p class="text-lg mb-6 font-source-code-pro">Además, Joshua Castro tiene su propio segmento en televisión, donde educa al público sobre las aplicaciones y avances de la IA. Su enfoque innovador y su habilidad para comunicar temas complejos de manera clara lo han posicionado como un líder influyente en el ámbito tecnológico. Con su trayectoria, [Tu Nombre] ofrece una perspectiva única y valiosa sobre el futuro de la inteligencia artificial.</p>
+                    <p class="text-lg mb-6 font-source-code-pro">Joshua Castro es un especialista en inteligencia
+                        artificial que ha trabajado en este campo desde 2020, fundando una de las primeras empresas
+                        pioneras de IA en Puerto Rico. Ha creado la comunidad de inteligencia artificial más grande y de
+                        más rápido crecimiento en la isla, donde profesionales y entusiastas se reúnen para compartir
+                        conocimientos.</p>
+                    <p class="text-lg mb-6 font-source-code-pro">Además, Joshua Castro tiene su propio segmento en
+                        televisión, donde educa al público sobre las aplicaciones y avances de la IA. Su enfoque
+                        innovador y su habilidad para comunicar temas complejos de manera clara lo han posicionado como
+                        un líder influyente en el ámbito tecnológico. Con su trayectoria, [Tu Nombre] ofrece una
+                        perspectiva única y valiosa sobre el futuro de la inteligencia artificial.</p>
                     <div class="flex space-x-4">
-                        <a href="https://www.instagram.com/thejoshuacastro/" target="_blank" rel="noopener noreferrer" class="text-accent hover:text-secondary transition-colors">
-                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z" clip-rule="evenodd" /></svg>
+                        <a href="https://www.instagram.com/thejoshuacastro/" target="_blank" rel="noopener noreferrer"
+                            class="text-accent hover:text-secondary transition-colors">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd"
+                                    d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z"
+                                    clip-rule="evenodd" />
+                            </svg>
                         </a>
-                        <a href="https://www.linkedin.com/in/thejoshuacastro/" target="_blank" rel="noopener noreferrer" class="text-accent hover:text-secondary transition-colors">
-                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                        <a href="https://www.linkedin.com/in/thejoshuacastro/" target="_blank" rel="noopener noreferrer"
+                            class="text-accent hover:text-secondary transition-colors">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+                            </svg>
                         </a>
-                        <a href="https://www.youtube.com/@thejoshuacastro" target="_blank" rel="noopener noreferrer" class="text-accent hover:text-secondary transition-colors">
-                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+                        <a href="https://www.youtube.com/@thejoshuacastro" target="_blank" rel="noopener noreferrer"
+                            class="text-accent hover:text-secondary transition-colors">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+                            </svg>
                         </a>
                     </div>
                 </div>
@@ -387,31 +493,41 @@
             <div class="max-w-6xl mx-auto">
                 <div class="relative">
                     <div class="overflow-hidden">
-                        <div class="flex flex-col md:flex-row transition-transform duration-300 ease-in-out" id="eventCarousel">
+                        <div class="flex flex-col md:flex-row transition-transform duration-300 ease-in-out"
+                            id="eventCarousel">
                             <div class="w-full md:w-1/3 px-4 mb-8 md:mb-0">
                                 <div class="bg-white rounded-lg shadow-md overflow-hidden relative">
                                     <img src="ICONS/event 1.png" alt="Evento 1" class="w-full h-auto">
-                                    <div class="absolute bottom-0 left-0 right-0 bg-white bg-opacity-90 p-4 transform translate-y-full transition-transform duration-300 hover:translate-y-0">
-                                        <h3 class="text-xl font-semibold text-primary font-nebula mb-2">NEXT: Puerto Rico Tourism Summit 2024</h3>
-                                        <p class="text-text font-source-code-pro">Panelist sobre como usar la IA para la creación de contenido</p>
+                                    <div
+                                        class="absolute bottom-0 left-0 right-0 bg-white bg-opacity-90 p-4 transform translate-y-full transition-transform duration-300 hover:translate-y-0">
+                                        <h3 class="text-xl font-semibold text-primary font-nebula mb-2">NEXT: Puerto
+                                            Rico Tourism Summit 2024</h3>
+                                        <p class="text-text font-source-code-pro">Panelist sobre como usar la IA para la
+                                            creación de contenido</p>
                                     </div>
                                 </div>
                             </div>
                             <div class="w-full md:w-1/3 px-4 mb-8 md:mb-0">
                                 <div class="bg-white rounded-lg shadow-md overflow-hidden relative">
                                     <img src="ICONS/event 2.png" alt="Evento 2" class="w-full h-auto">
-                                    <div class="absolute bottom-0 left-0 right-0 bg-white bg-opacity-90 p-4 transform translate-y-full transition-transform duration-300 hover:translate-y-0">
-                                        <h3 class="text-xl font-semibold text-primary font-nebula mb-2">Digitize 2.0</h3>
-                                        <p class="text-text font-source-code-pro">Taller sobre como automatizar tu empresa y crear una compañía unipersonal</p>
+                                    <div
+                                        class="absolute bottom-0 left-0 right-0 bg-white bg-opacity-90 p-4 transform translate-y-full transition-transform duration-300 hover:translate-y-0">
+                                        <h3 class="text-xl font-semibold text-primary font-nebula mb-2">Digitize 2.0
+                                        </h3>
+                                        <p class="text-text font-source-code-pro">Taller sobre como automatizar tu
+                                            empresa y crear una compañía unipersonal</p>
                                     </div>
                                 </div>
                             </div>
                             <div class="w-full md:w-1/3 px-4">
                                 <div class="bg-white rounded-lg shadow-md overflow-hidden relative">
                                     <img src="ICONS/event 3.png" alt="Evento 3" class="w-full h-auto">
-                                    <div class="absolute bottom-0 left-0 right-0 bg-white bg-opacity-90 p-4 transform translate-y-full transition-transform duration-300 hover:translate-y-0">
-                                        <h3 class="text-xl font-semibold text-primary font-nebula mb-2">UPR Mayagüez</h3>
-                                        <p class="text-text font-source-code-pro">Charla sobre como mantenerte relevante con la IA</p>
+                                    <div
+                                        class="absolute bottom-0 left-0 right-0 bg-white bg-opacity-90 p-4 transform translate-y-full transition-transform duration-300 hover:translate-y-0">
+                                        <h3 class="text-xl font-semibold text-primary font-nebula mb-2">UPR Mayagüez
+                                        </h3>
+                                        <p class="text-text font-source-code-pro">Charla sobre como mantenerte relevante
+                                            con la IA</p>
                                     </div>
                                 </div>
                             </div>
@@ -424,70 +540,104 @@
             <h2 class="text-3xl font-bold text-primary font-nebula mb-12 text-center">Preguntas Frecuentes</h2>
             <div class="space-y-4">
                 <div class="bg-white rounded-lg border border-text overflow-hidden">
-                    <button class="faq-question w-full text-left p-6 focus:outline-none flex justify-between items-center">
-                        <h3 class="text-xl font-semibold text-secondary font-nebula">¿A quién está dirigido este taller?</h3>
-                        <svg class="w-6 h-6 transform transition-transform duration-200 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                    <button
+                        class="faq-question w-full text-left p-6 focus:outline-none flex justify-between items-center">
+                        <h3 class="text-xl font-semibold text-secondary font-nebula">¿A quién está dirigido este taller?
+                        </h3>
+                        <svg class="w-6 h-6 transform transition-transform duration-200 text-primary" fill="none"
+                            stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7">
+                            </path>
                         </svg>
                     </button>
                     <div class="faq-answer hidden p-6 pt-0 text-text font-source-code-pro">
-                        <p>Este taller está diseñado para profesionales, estudiantes y entusiastas interesados en aprender sobre IA, independientemente de su nivel de experiencia técnica.</p>
+                        <p>Este taller está diseñado para profesionales, estudiantes y entusiastas interesados en
+                            aprender sobre IA, independientemente de su nivel de experiencia técnica.</p>
                     </div>
                 </div>
                 <div class="bg-white rounded-lg border border-text overflow-hidden">
-                    <button class="faq-question w-full text-left p-6 focus:outline-none flex justify-between items-center">
-                        <h3 class="text-xl font-semibold text-secondary font-nebula">¿Necesito conocimientos previos de programación?</h3>
-                        <svg class="w-6 h-6 transform transition-transform duration-200 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                    <button
+                        class="faq-question w-full text-left p-6 focus:outline-none flex justify-between items-center">
+                        <h3 class="text-xl font-semibold text-secondary font-nebula">¿Necesito conocimientos previos de
+                            programación?</h3>
+                        <svg class="w-6 h-6 transform transition-transform duration-200 text-primary" fill="none"
+                            stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7">
+                            </path>
                         </svg>
                     </button>
                     <div class="faq-answer hidden p-6 pt-0 text-text font-source-code-pro">
-                        <p>No se requieren conocimientos previos de programación, aunque una comprensión básica de conceptos tecnológicos puede ser útil.</p>
+                        <p>No se requieren conocimientos previos de programación, aunque una comprensión básica de
+                            conceptos tecnológicos puede ser útil.</p>
                     </div>
                 </div>
                 <div class="bg-white rounded-lg border border-text overflow-hidden">
-                    <button class="faq-question w-full text-left p-6 focus:outline-none flex justify-between items-center">
+                    <button
+                        class="faq-question w-full text-left p-6 focus:outline-none flex justify-between items-center">
                         <h3 class="text-xl font-semibold text-secondary font-nebula">¿Qué debo traer al taller?</h3>
-                        <svg class="w-6 h-6 transform transition-transform duration-200 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        <svg class="w-6 h-6 transform transition-transform duration-200 text-primary" fill="none"
+                            stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7">
+                            </path>
                         </svg>
                     </button>
                     <div class="faq-answer hidden p-6 pt-0 text-text font-source-code-pro">
-                        <p>Te recomendamos traer una laptop para seguir las demostraciones prácticas. Proporcionaremos todos los materiales necesarios.</p>
+                        <p>Te recomendamos traer una laptop para seguir las demostraciones prácticas. Proporcionaremos
+                            todos los materiales necesarios.</p>
                     </div>
                 </div>
                 <div class="bg-white rounded-lg border border-text overflow-hidden">
-                    <button class="faq-question w-full text-left p-6 focus:outline-none flex justify-between items-center">
-                        <h3 class="text-xl font-semibold text-secondary font-nebula">¿Habrá oportunidades de networking?</h3>
-                        <svg class="w-6 h-6 transform transition-transform duration-200 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                    <button
+                        class="faq-question w-full text-left p-6 focus:outline-none flex justify-between items-center">
+                        <h3 class="text-xl font-semibold text-secondary font-nebula">¿Habrá oportunidades de networking?
+                        </h3>
+                        <svg class="w-6 h-6 transform transition-transform duration-200 text-primary" fill="none"
+                            stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7">
+                            </path>
                         </svg>
                     </button>
                     <div class="faq-answer hidden p-6 pt-0 text-text font-source-code-pro">
-                        <p>Sí, el taller incluirá sesiones de networking para que puedas conectar con otros profesionales y entusiastas de la IA.</p>
+                        <p>Sí, el taller incluirá sesiones de networking para que puedas conectar con otros
+                            profesionales y entusiastas de la IA.</p>
                     </div>
                 </div>
                 <div class="bg-white rounded-lg border border-text overflow-hidden">
-                    <button class="faq-question w-full text-left p-6 focus:outline-none flex justify-between items-center">
-                        <h3 class="text-xl font-semibold text-secondary font-nebula">¿Recibiré un certificado al completar el taller?</h3>
-                        <svg class="w-6 h-6 transform transition-transform duration-200 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                    <button
+                        class="faq-question w-full text-left p-6 focus:outline-none flex justify-between items-center">
+                        <h3 class="text-xl font-semibold text-secondary font-nebula">¿Recibiré un certificado al
+                            completar el taller?</h3>
+                        <svg class="w-6 h-6 transform transition-transform duration-200 text-primary" fill="none"
+                            stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7">
+                            </path>
                         </svg>
                     </button>
                     <div class="faq-answer hidden p-6 pt-0 text-text font-source-code-pro">
-                        <p>Sí, todos los participantes recibirán un certificado de asistencia al finalizar el taller.</p>
+                        <p>Sí, todos los participantes recibirán un certificado de asistencia al finalizar el taller.
+                        </p>
                     </div>
                 </div>
                 <div class="bg-white rounded-lg border border-text overflow-hidden">
-                    <button class="faq-question w-full text-left p-6 focus:outline-none flex justify-between items-center">
+                    <button
+                        class="faq-question w-full text-left p-6 focus:outline-none flex justify-between items-center">
                         <h3 class="text-xl font-semibold text-secondary font-nebula">¿Qué incluye el paquete VIP?</h3>
-                        <svg class="w-6 h-6 transform transition-transform duration-200 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        <svg class="w-6 h-6 transform transition-transform duration-200 text-primary" fill="none"
+                            stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7">
+                            </path>
                         </svg>
                     </button>
                     <div class="faq-answer hidden p-6 pt-0 text-text font-source-code-pro">
-                        <p>El paquete VIP incluye un asiento en la primera fila durante el taller y una sesión exclusiva de networking con un Meet & Greet con los ponentes y otros profesionales de la industria.</p>
+                        <p>El paquete VIP incluye un asiento en la primera fila durante el taller y una sesión exclusiva
+                            de networking con un Meet & Greet con los ponentes y otros profesionales de la industria.
+                        </p>
                     </div>
                 </div>
             </div>
         </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+
+</html>
