@@ -3,15 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Joshua Castro</title>
+    <title>Por qué voté por la I.A. - Joshua Castro</title>
     
     <!-- Font imports -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
         @font-face {
             font-family: 'Nebula';
             src: url('fonts/Nebula-Regular.otf') format('opentype');
             font-weight: normal;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'Source Code Pro';
+            src: url('fonts/SourceCodePro-Regular.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'Montserrat';
+            src: url('fonts/Montserrat-SemiBold.ttf') format('truetype');
+            font-weight: 600;
             font-style: normal;
         }
     </style>
@@ -22,8 +35,9 @@
             theme: {
                 extend: {
                     fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
                         nebula: ['Nebula', 'sans-serif'],
+                        'source-code': ['Source Code Pro', 'monospace'],
+                        montserrat: ['Montserrat', 'sans-serif'],
                     }
                 }
             }
@@ -31,7 +45,7 @@
     </script>
 </head>
 
-<body class="bg-slate-50">
+<body class="bg-slate-50 font-source-code">
     <!-- Navigation -->
     <nav class="fixed top-0 w-full bg-white border-b border-slate-100 z-50">
         <div class="max-w-2xl mx-auto px-4 h-16 flex items-center justify-between">
@@ -64,21 +78,18 @@
             </header>
 
             <!-- Article Content -->
-            <div class="prose prose-slate prose-lg max-w-none">
+            <div class="prose prose-lg max-w-none">
                 <!-- Introduction -->
-                <p class="text-xl text-slate-600 mb-8 font-medium">
-                    "Sí, voté por la inteligencia artificial. No creo que la I.A. sea la respuesta definitiva, 
-                    pero estamos en un momento crítico donde el juicio humano, por sí solo, ya no es suficiente."
-                </p>
-
-                <p>
+                <p class="leading-relaxed">
+                    Sí, voté por la inteligencia artificial. No creo que la I.A. sea la respuesta definitiva, 
+                    pero estamos en un momento crítico donde el juicio humano, por sí solo, ya no es suficiente.
                     Necesitamos un sistema que combine nuestros valores humanos con la capacidad de la I.A. para 
                     analizar y decidir con precisión. Esto no se trata solo de elegir entre candidatos; es un 
                     llamado a replantearnos toda nuestra democracia y a reconocer que la tecnología podría 
                     aportar equidad y profundidad a nuestras decisiones.
                 </p>
 
-                <p>
+                <p class="leading-relaxed">
                     En estas elecciones voté por Juan Dalmau, pero mi voto por la I.A. fue una declaración 
                     contra un sistema que sigue dependiendo exclusivamente de la limitada capacidad humana, 
                     llena de errores y manipulaciones. Si combináramos lo mejor del juicio humano con el poder 
@@ -94,24 +105,30 @@
                     tres conclusiones esenciales:
                 </p>
 
-                <h2>Ser educado, lamentablemente, sigue siendo un privilegio</h2>
-                <p>
+                <h2 class="font-montserrat font-semibold text-2xl text-slate-900 mt-12 mb-6">
+                    Ser educado, lamentablemente, sigue siendo un privilegio
+                </h2>
+                <p class="leading-relaxed">
                     Esto quedó claro en los comentarios y mensajes que recibí. Muchas personas buscaban razones 
                     para votar por Juan Dalmau, pero en persona, otros me decían que votar por él traería el 
                     comunismo a Puerto Rico. Esto me hizo darme cuenta de cómo nuestras "burbujas de información" 
                     limitan nuestra visión.
                 </p>
 
-                <h2>Menos insultos, más unidad</h2>
-                <p>
+                <h2 class="font-montserrat font-semibold text-2xl text-slate-900 mt-12 mb-6">
+                    Menos insultos, más unidad
+                </h2>
+                <p class="leading-relaxed">
                     En la política, los insultos y ataques dividen más de lo que unen. Frases como "Muerte al PNP" 
                     o "los PNP son corruptos" pueden apuntar a la institución, pero terminan ofendiendo a personas. 
                     Mientras nuestro objetivo es arreglar un sistema roto, este lenguaje nos fragmenta y nos impide 
                     avanzar juntos.
                 </p>
 
-                <h2>No son los individuos; es el sistema</h2>
-                <p>
+                <h2 class="font-montserrat font-semibold text-2xl text-slate-900 mt-12 mb-6">
+                    No son los individuos; es el sistema
+                </h2>
+                <p class="leading-relaxed">
                     Muchos de los candidatos que entrevisté tienen buenas intenciones, pero el sistema, tal y como 
                     está, no permite el cambio profundo que Puerto Rico necesita. Nuestra democracia fue originalmente 
                     construida para servir a unos pocos y, aunque con el tiempo se han ampliado los derechos, su 
@@ -126,15 +143,17 @@
                     </p>
                 </blockquote>
 
-                <h2>Conclusión</h2>
-                <p>
+                <h2 class="font-montserrat font-semibold text-2xl text-slate-900 mt-12 mb-6">
+                    Conclusión
+                </h2>
+                <p class="leading-relaxed">
                     Llegamos a un punto donde el sistema que nos prometió representarnos ya no responde a nuestras 
                     realidades, nuestras necesidades ni a nuestros sueños. Un sistema que deja la educación en manos 
                     de unos pocos, que nos divide cuando necesitamos unidad, y que concentra el poder en unos cuantos 
                     mientras nuestras voces se pierden.
                 </p>
 
-                <p>
+                <p class="leading-relaxed">
                     Esta no es una visión lejana ni fría; es una esperanza de recuperar lo que nos hace humanos: 
                     el derecho a decidir nuestro futuro juntos, sin barreras ni manipulaciones. La inteligencia 
                     artificial, bien utilizada, no nos aleja de nuestra humanidad; al contrario, puede ser el puente 
