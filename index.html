@@ -3,300 +3,146 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>joshuacastro.ai - Taller de IA</title>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Montserrat:wght@400;600;700&family=Source+Code+Pro:wght@400;600&display=swap"
-        rel="stylesheet">
+    <title>Blog Post Title - Joshua Castro</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
             theme: {
                 extend: {
-                    colors: {
-                        primary: '#000000',
-                        secondary: '#1D1D1F',
-                        background: '#FFFFFF',
-                        text: '#1D1D1F',
-                        accent: '#0071E3',
-                    },
                     fontFamily: {
-                        'sans': ['SF Pro Text', 'SF Pro Icons', 'Helvetica Neue', 'Helvetica', 'Arial', 'sans-serif'],
-                        'display': ['SF Pro Display', 'SF Pro Icons', 'Helvetica Neue', 'Helvetica', 'Arial', 'sans-serif'],
-                        'nebula': ['Nebula', 'sans-serif'],
-                        'source-code-pro': ['Source Code Pro', 'monospace'],
+                        sans: ['Inter', 'sans-serif'],
                     },
+                    typography: {
+                        DEFAULT: {
+                            css: {
+                                'max-width': '65ch',
+                                color: '#334155',
+                                p: {
+                                    marginBottom: '2em',
+                                    lineHeight: '1.8',
+                                    fontSize: '1.125rem'
+                                },
+                                'h2, h3': {
+                                    color: '#1e293b',
+                                    marginTop: '2em',
+                                    marginBottom: '1em'
+                                }
+                            }
+                        }
+                    }
                 }
             }
         }
     </script>
-    <style>
-        @font-face {
-            font-family: 'Nebula';
-            src: url('nebula-regular.otf') format('opentype');
-            font-weight: normal;
-            font-style: normal;
-        }
-
-        .perspective {
-            perspective: 1000px;
-        }
-
-        .event-card {
-            transform-style: preserve-3d;
-        }
-
-        .event-card:hover {
-            transform: rotateY(10deg) scale(1.05);
-        }
-
-        @keyframes float {
-
-            0%,
-            100% {
-                transform: translateY(0);
-            }
-
-            50% {
-                transform: translateY(-10px);
-            }
-        }
-
-        .animate-float {
-            animation: float 6s ease-in-out infinite;
-        }
-
-        @keyframes float-icon {
-
-            0%,
-            100% {
-                transform: translateY(0);
-            }
-
-            50% {
-                transform: translateY(-10px);
-            }
-        }
-
-        .ai-tool-icon {
-            animation: float-icon 3s ease-in-out infinite;
-        }
-
-        .ai-tool-icon:nth-child(2) {
-            animation-delay: 0.5s;
-        }
-
-        .ai-tool-icon:nth-child(3) {
-            animation-delay: 1s;
-        }
-
-        .ai-tool-icon:nth-child(4) {
-            animation-delay: 1.5s;
-        }
-
-        .ai-tool-icon:nth-child(5) {
-            animation-delay: 2s;
-        }
-
-        .ai-tool-icon:nth-child(6) {
-            animation-delay: 2.5s;
-        }
-
-        @keyframes pulse {
-
-            0%,
-            100% {
-                transform: scale(1);
-                opacity: 1;
-            }
-
-            50% {
-                transform: scale(1.1);
-                opacity: 0.8;
-            }
-        }
-
-        .ai-icon {
-            animation: pulse 2s infinite, float 6s ease-in-out infinite;
-            transition: all 0.3s ease;
-        }
-
-        .ai-icon:hover {
-            filter: drop-shadow(0 0 10px rgba(6, 182, 212, 0.7));
-        }
-
-        .ai-icon-bg {
-            transition: all 0.3s ease;
-        }
-
-        .ai-icon:hover .ai-icon-bg {
-            fill: rgba(6, 182, 212, 0.2);
-        }
-
-        .aspect-w-16 {
-            position: relative;
-            padding-bottom: 56.25%;
-        }
-
-        .aspect-w-16 iframe {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-        }
-
-        .carousel-container {
-            display: flex;
-            transition: transform 0.5s ease;
-        }
-
-        .carousel-item {
-            flex: 0 0 100%;
-        }
-
-        .flip-card {
-            perspective: 1000px;
-            width: 100%;
-            height: 100%;
-        }
-
-        .flip-card-inner {
-            position: relative;
-            width: 100%;
-            height: 100%;
-            text-align: center;
-            transition: transform 0.6s;
-            transform-style: preserve-3d;
-        }
-
-        .flip-card.flipped .flip-card-inner {
-            transform: rotateY(180deg);
-        }
-
-        .flip-card-front,
-        .flip-card-back {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            -webkit-backface-visibility: hidden;
-            backface-visibility: hidden;
-        }
-
-        .flip-card-back {
-            transform: rotateY(180deg);
-        }
-    </style>
-    <!-- Meta Pixel Code -->
-    <script>
-        !function (f, b, e, v, n, t, s) {
-            if (f.fbq) return; n = f.fbq = function () {
-                n.callMethod ?
-                n.callMethod.apply(n, arguments) : n.queue.push(arguments)
-            };
-            if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
-            n.queue = []; t = b.createElement(e); t.async = !0;
-            t.src = v; s = b.getElementsByTagName(e)[0];
-            s.parentNode.insertBefore(t, s)
-        }(window, document, 'script',
-            'https://connect.facebook.net/en_US/fbevents.js');
-        fbq('init', '2188917394822413');
-        fbq('track', 'PageView');
-    </script>
-    <noscript><img height="1" width="1" style="display:none"
-            src="https://www.facebook.com/tr?id=2188917394822413&ev=PageView&noscript=1" /></noscript>
-    <!-- End Meta Pixel Code -->
-    <link rel="icon" type="image/png" href="ICONS/SUG_Logomark_ChromedBlue.png">
 </head>
 
-<body class="bg-background text-text font-sans">
-    <header class="fixed w-full bg-[#f5f8ff] z-50">
-        <nav class="flex justify-between items-center p-4 max-w-7xl mx-auto">
-            <div class="flex items-center">
-                <img src="ICONS/logodark.png" alt="Logo" class="h-8 w-auto">
-            </div>
-            <div class="flex items-center space-x-6">
-                <a href="#" class="text-text hover:text-accent">Home</a>
-                <a href="#" class="text-text hover:text-accent">Blog</a>
-                <a href="#" class="text-text hover:text-accent">About</a>
-                <a href="#" class="text-text hover:text-accent">Contact</a>
-            </div>
-        </nav>
-    </header>
+<body class="bg-white">
+    <!-- Minimal Navigation -->
+    <nav class="fixed top-0 w-full bg-white/80 backdrop-blur-sm border-b border-gray-100 z-50">
+        <div class="max-w-3xl mx-auto px-4 h-16 flex items-center justify-between">
+            <a href="/" class="text-gray-900 font-medium">Joshua Castro</a>
+            <a href="/blog" class="text-gray-600 hover:text-gray-900">← Back to Blog</a>
+        </div>
+    </nav>
 
-    <main class="pt-24 pb-16">
-        <article class="max-w-3xl mx-auto px-4">
-            <!-- Blog Header -->
-            <header class="mb-12">
-                <h1 class="text-4xl md:text-5xl font-bold font-nebula mb-4">Title of Your Blog Post</h1>
-                <div class="flex items-center space-x-4 text-gray-600">
-                    <div class="flex items-center">
-                        <img src="ICONS/Joshua Castro.jpg" alt="Joshua Castro" class="w-10 h-10 rounded-full mr-3">
-                        <span class="font-medium">Joshua Castro</span>
-                    </div>
-                    <span>•</span>
-                    <time datetime="2024-03-21">March 21, 2024</time>
-                    <span>•</span>
-                    <span>5 min read</span>
+    <main class="pt-24">
+        <!-- Hero Section -->
+        <header class="max-w-3xl mx-auto px-4 mb-16">
+            <div class="flex items-center space-x-2 text-sm text-gray-600 mb-8">
+                <time datetime="2024-03-21">March 21, 2024</time>
+                <span>•</span>
+                <span>5 min read</span>
+            </div>
+            <h1 class="text-4xl md:text-5xl font-bold text-gray-900 tracking-tight mb-8">
+                The Future of Artificial Intelligence: A Deep Dive into Neural Networks
+            </h1>
+            <div class="flex items-center space-x-3">
+                <img src="ICONS/Joshua Castro.jpg" 
+                     alt="Joshua Castro" 
+                     class="w-12 h-12 rounded-full">
+                <div>
+                    <div class="font-medium text-gray-900">Joshua Castro</div>
+                    <div class="text-sm text-gray-600">AI Specialist</div>
                 </div>
-            </header>
-
-            <!-- Featured Image -->
-            <div class="mb-12">
-                <img src="path/to/featured-image.jpg" alt="Featured Image" class="w-full h-auto rounded-lg shadow-lg">
             </div>
+        </header>
 
-            <!-- Blog Content -->
-            <div class="prose prose-lg max-w-none">
-                <p>Your blog content goes here...</p>
-                
-                <!-- Example content sections -->
-                <h2>Section Heading</h2>
-                <p>Section content...</p>
+        <!-- Blog Content -->
+        <article class="max-w-3xl mx-auto px-4 mb-24">
+            <div class="prose prose-lg">
+                <!-- Introduction -->
+                <p class="lead text-xl text-gray-700">
+                    In recent years, artificial intelligence has transformed from a sci-fi concept into a 
+                    tangible reality that affects our daily lives. This post explores the fundamental 
+                    principles behind neural networks and their impact on modern technology.
+                </p>
+
+                <!-- Main Content -->
+                <h2>Understanding Neural Networks</h2>
+                <p>
+                    Neural networks are computing systems vaguely inspired by the biological neural 
+                    networks that constitute animal brains. The concept has evolved significantly since 
+                    its inception, leading to breakthrough applications in various fields.
+                </p>
 
                 <blockquote>
-                    <p>Important quote or highlight...</p>
+                    <p>
+                        "The development of artificial intelligence could be the biggest event in human history. 
+                        It might also be the last, unless we learn how to avoid the risks."
+                    </p>
                 </blockquote>
 
-                <!-- Code block example -->
+                <h2>Applications in Modern Technology</h2>
+                <p>
+                    From voice assistants to autonomous vehicles, neural networks are powering some of 
+                    the most innovative technologies of our time. Let's explore some key applications 
+                    that demonstrate their versatility and potential.
+                </p>
+
+                <!-- Code Example -->
                 <pre><code class="language-python">
-                    def example():
-                        return "Hello, World!"
+# Simple neural network example
+import tensorflow as tf
+
+model = tf.keras.Sequential([
+    tf.keras.layers.Dense(128, activation='relu'),
+    tf.keras.layers.Dense(10, activation='softmax')
+])
                 </code></pre>
+
+                <h2>Future Implications</h2>
+                <p>
+                    As we continue to advance in this field, the possibilities seem endless. However, 
+                    with great power comes great responsibility. We must carefully consider the ethical 
+                    implications and ensure responsible development of AI technologies.
+                </p>
+
+                <!-- Conclusion -->
+                <h2>Conclusion</h2>
+                <p>
+                    The journey of artificial intelligence is just beginning, and neural networks will 
+                    play a crucial role in shaping our future. As we move forward, it's essential to 
+                    stay informed and engaged in these technological developments.
+                </p>
             </div>
 
             <!-- Author Bio -->
-            <div class="mt-16 p-6 bg-gray-50 rounded-lg">
-                <div class="flex items-start space-x-4">
-                    <img src="ICONS/Joshua Castro.jpg" alt="Joshua Castro" class="w-16 h-16 rounded-full">
+            <footer class="mt-16 pt-8 border-t border-gray-200">
+                <div class="flex items-center space-x-4">
+                    <img src="ICONS/Joshua Castro.jpg" 
+                         alt="Joshua Castro" 
+                         class="w-16 h-16 rounded-full">
                     <div>
-                        <h3 class="font-bold text-lg mb-2">Joshua Castro</h3>
-                        <p class="text-gray-600 mb-4">Joshua Castro es un especialista en inteligencia artificial (IA) desde 2020...</p>
-                        <div class="flex space-x-4">
-                            <!-- Social media links (reuse existing social icons) -->
-                        </div>
+                        <div class="font-medium text-gray-900">Written by Joshua Castro</div>
+                        <p class="mt-1 text-gray-600">
+                            AI specialist and technology consultant with a passion for making complex 
+                            concepts accessible to everyone.
+                        </p>
                     </div>
                 </div>
-            </div>
+            </footer>
         </article>
-
-        <!-- Related Posts -->
-        <section class="max-w-3xl mx-auto px-4 mt-16">
-            <h2 class="text-2xl font-bold mb-8">Related Posts</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <!-- Related post cards -->
-                <div class="bg-white rounded-lg shadow-md overflow-hidden">
-                    <img src="path/to/image.jpg" alt="Related Post" class="w-full h-48 object-cover">
-                    <div class="p-6">
-                        <h3 class="font-bold text-xl mb-2">Related Post Title</h3>
-                        <p class="text-gray-600">Brief excerpt from the related post...</p>
-                    </div>
-                </div>
-                <!-- Add more related posts as needed -->
-            </div>
-        </section>
     </main>
-
-    <script src="script.js"></script>
 </body>
-
 </html>
