@@ -1,0 +1,29 @@
+<!-- Add this in the <head> section -->
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+    tailwind.config = {
+        theme: {
+            extend: {
+                fontFamily: {
+                    nebula: ['Nebula', 'sans-serif'],
+                    'source-code': ['Source Code Pro', 'monospace'],
+                }
+            }
+        }
+    }
+</script>
+
+<!-- Add this right after <body> and before the hero section -->
+<!-- Navigation -->
+<nav class="fixed top-0 w-full bg-white border-b border-slate-100 z-50">
+    <div class="max-w-2xl mx-auto px-4 h-16 flex items-center justify-center">
+        <div class="flex items-center space-x-12">
+            <a href="/" class="text-slate-900 font-medium hover:text-blue-600 transition-colors">Home</a>
+            <a href="/Blog/blog.html" class="text-slate-600 hover:text-blue-600 transition-colors">Blog</a>
+            <a href="/Events/events.html" class="text-slate-600 hover:text-blue-600 transition-colors">Events</a>
+        </div>
+    </div>
+</nav>
+
+<!-- Add margin-top to the hero section to prevent content overlap -->
+<section class="hero" style="margin-top: 64px;"> 
