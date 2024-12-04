@@ -3,261 +3,211 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Por qué voté por la I.A. - Joshua Castro</title>
+    <title>Curso de IA en la Educación</title>
     
     <!-- Font imports -->
     <style>
         @font-face {
             font-family: 'Nebula';
-            src: url('fonts/Nebula-Regular.otf') format('opentype');
+            src: url('../fonts/Nebula-Regular.otf') format('opentype');
             font-weight: normal;
             font-style: normal;
         }
 
         @font-face {
             font-family: 'Source Code Pro';
-            src: url('fonts/SourceCodePro-Regular.ttf') format('truetype');
+            src: url('../fonts/SourceCodePro-Regular.ttf') format('truetype');
             font-weight: normal;
             font-style: normal;
         }
 
-        @font-face {
-            font-family: 'Montserrat';
-            src: url('fonts/Montserrat-SemiBold.ttf') format('truetype');
-            font-weight: 600;
-            font-style: normal;
+        body {
+            font-family: 'Source Code Pro', monospace;
+            background-color: #f8fafc;
+            margin: 0;
+            padding: 0;
+        }
+
+        .hero {
+            background-image: url('images/futuristic-classroom.jpg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+            padding: 100px 20px;
+        }
+
+        .hero h1 {
+            font-family: 'Nebula', sans-serif;
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 1.5rem;
+            margin-bottom: 30px;
+        }
+
+        .hero button {
+            background-color: #1e293b;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            cursor: pointer;
+        }
+
+        .section {
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .section h2 {
+            font-family: 'Nebula', sans-serif;
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        .section p {
+            font-size: 1rem;
+            color: #64748b;
+            margin-bottom: 20px;
+        }
+
+        .modules {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .module {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            width: 200px;
+            text-align: center;
+        }
+
+        .module h3 {
+            font-family: 'Nebula', sans-serif;
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+        }
+
+        .form {
+            max-width: 400px;
+            margin: 0 auto;
+            text-align: left;
+        }
+
+        .form input, .form select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .form button {
+            width: 100%;
+            background-color: #1e293b;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            cursor: pointer;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        footer a {
+            color: #fff;
+            margin: 0 10px;
+            text-decoration: none;
         }
     </style>
-    
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: {
-                        nebula: ['Nebula', 'sans-serif'],
-                        'source-code': ['Source Code Pro', 'monospace'],
-                        montserrat: ['Montserrat', 'sans-serif'],
-                    }
-                }
-            }
-        }
-    </script>
 </head>
+<body>
+    <!-- Hero Banner -->
+    <section class="hero">
+        <h1>Transforma la Educación con Inteligencia Artificial</h1>
+        <p>Un curso gratuito para maestros y estudiantes que conecta el aprendizaje con las herramientas del futuro</p>
+        <button>¡Inscríbete Gratis!</button>
+    </section>
 
-<body class="bg-slate-50 font-source-code">
-    <!-- Navigation - Simplified -->
-    <nav class="fixed top-0 w-full bg-white border-b border-slate-100 z-50">
-        <div class="max-w-2xl mx-auto px-4 h-16 flex items-center justify-center">
-            <div class="flex items-center space-x-12">
-                <a href="/" class="text-slate-900 font-medium hover:text-blue-600 transition-colors">Home</a>
-                <a href="/Blog/blog.html" class="text-slate-600 hover:text-blue-600 transition-colors">Blog</a>
-                <a href="/Events/events.html" class="text-slate-600 hover:text-blue-600 transition-colors">Events</a>
+    <!-- Sobre el Curso -->
+    <section class="section">
+        <h2>¿Por qué usar IA en la educación?</h2>
+        <p>Para Maestros: Mejora tus métodos de enseñanza.</p>
+        <p>Para Estudiantes: Desarrolla proyectos y mejora tus hábitos de estudio.</p>
+    </section>
+
+    <!-- Módulos del Curso -->
+    <section class="section">
+        <h2>¿Qué aprenderás?</h2>
+        <div class="modules">
+            <div class="module">
+                <h3>Introducción a las Herramientas de IA</h3>
+            </div>
+            <div class="module">
+                <h3>Mejorando la Enseñanza y el Aprendizaje</h3>
+            </div>
+            <div class="module">
+                <h3>Aprendizaje Basado en Proyectos</h3>
+            </div>
+            <div class="module">
+                <h3>Uso Responsable de la IA</h3>
+            </div>
+            <div class="module">
+                <h3>Más Allá del Aula</h3>
             </div>
         </div>
-    </nav>
+    </section>
 
-    <main class="pt-24 pb-16">
-        <article class="max-w-2xl mx-auto px-4">
-            <!-- Article Header -->
-            <header class="mb-16">
-                <div class="flex items-center space-x-2 text-sm text-slate-600 mb-6">
-                    <time datetime="2024-03-21">Noviembre 12, 2024</time>
-                    <span>•</span>
-                    <span>8 min read</span>
-                </div>
-                <h1 class="font-nebula text-5xl md:text-6xl text-slate-900 mb-8 leading-tight">
-                    Por qué voté por la I.A.
-                </h1>
-                <div class="flex items-center space-x-3">
-                    <img src="/PROFILE/Joshua_ProfilePicture (1).jpg" 
-                         alt="Joshua Castro" 
-                         class="w-12 h-12 rounded-full">
-                    <div>
-                        <div class="font-medium text-slate-900">Joshua Castro</div>
-                        <div class="text-sm text-slate-600">Glitch</div>
-                    </div>
-                </div>
-            </header>
+    <!-- ¿Para Quién es Este Curso? -->
+    <section class="section">
+        <h2>¿Para quién es este curso?</h2>
+        <p>Dirigido a maestros que buscan herramientas innovadoras y a estudiantes interesados en aprender de manera eficiente.</p>
+        <button>Inscríbete ahora</button>
+    </section>
 
-            <!-- Article Content -->
-            <div class="prose prose-lg max-w-none">
-                <!-- Introduction -->
-                <p class="leading-relaxed">
-                    Sí, voté por la inteligencia artificial. No creo que la I.A. sea la respuesta definitiva, 
-                    pero estamos en un momento crítico donde el juicio humano, por sí solo, ya no es suficiente.
-                    Necesitamos un sistema que combine nuestros valores humanos con la capacidad de la I.A. para 
-                    analizar y decidir con precisión. Esto no se trata solo de elegir entre candidatos; es un 
-                    llamado a replantearnos toda nuestra democracia y a reconocer que la tecnología podría 
-                    aportar equidad y profundidad a nuestras decisiones.
-                </p>
+    <!-- Beneficios Adicionales -->
+    <section class="section">
+        <h2>10 Escuelas Serán Seleccionadas para Beneficios Exclusivos</h2>
+        <p>Explica que las escuelas pueden participar enviando un video y serán seleccionadas para recibir soporte adicional.</p>
+        <button>Participar Ahora</button>
+    </section>
 
-                <p class="leading-relaxed mt-8 mb-8">
-                    En estas elecciones voté por Juan Dalmau, pero mi voto por la I.A. fue una declaración 
-                    contra un sistema que sigue dependiendo exclusivamente de la limitada capacidad humana, 
-                    llena de errores y manipulaciones. Si combináramos lo mejor del juicio humano con el poder 
-                    analítico de la I.A., podríamos resolver muchos de los problemas actuales de una mejor manera.
-                </p>
+    <!-- Formulario de Inscripción -->
+    <section class="section">
+        <h2>¡Regístrate Hoy!</h2>
+        <form class="form">
+            <input type="text" placeholder="Nombre" required>
+            <input type="email" placeholder="Email" required>
+            <select required>
+                <option value="">Rol</option>
+                <option value="maestro">Maestro</option>
+                <option value="estudiante">Estudiante</option>
+            </select>
+            <input type="text" placeholder="Escuela (opcional)">
+            <button>Empieza Gratis</button>
+        </form>
+    </section>
 
-                <p class="leading-relaxed mt-8">
-                    Cuando entrevisté a los candidatos, mi objetivo era claro: quería ver si podían convencerme 
-                    de que vale la pena quedarme en Puerto Rico. No porque dude de la dignidad de este país, 
-                    sino porque no quiero vivir en un lugar controlado por los mismos que han permitido su 
-                    deterioro. Quería creer que el cambio real era posible. Al final, decidí votar por la I.A. 
-                    porque entendí que el sistema necesita transformarse por completo. Esta decisión se basa en 
-                    tres conclusiones esenciales:
-                </p>
-
-                <h2 class="font-montserrat font-semibold text-2xl text-slate-900 mt-12 mb-6">
-                    Ser educado, lamentablemente, sigue siendo un privilegio
-                </h2>
-                <p class="leading-relaxed">
-                    Esto quedó claro en los comentarios y mensajes que recibí. Muchas personas buscaban razones 
-                    para votar por Juan Dalmau, pero en persona, otros me decían que votar por él traería el 
-                    comunismo a Puerto Rico. Esto me hizo darme cuenta de cómo nuestras "burbujas de información" 
-                    limitan nuestra visión. En las redes sociales, todos parecían molestos con la administración 
-                    actual, pero en la calle, la realidad era distinta.
-                </p>
-
-                <p class="leading-relaxed mt-6">
-                    Muchas personas que querían votar por la Alianza no entendían bien cómo hacerlo, diluyendo 
-                    sus votos. La I.A. podría resolver esto, educando y guiando a las personas de manera 
-                    personalizada. Imagina que, cada vez que se difunda información falsa sobre un candidato, 
-                    un asistente de I.A. pueda corregirlo al instante. O imagina que la I.A. guíe a los 
-                    votantes paso a paso sobre cómo marcar su papeleta correctamente, haciendo el proceso de 
-                    votación claro para todos.
-                </p>
-
-                <p class="leading-relaxed mt-6 italic">
-                    Soluciones simples como estas podrían mejorar mucho nuestras elecciones.
-                </p>
-
-                <h2 class="font-montserrat font-semibold text-2xl text-slate-900 mt-12 mb-6">
-                    Menos insultos, más unidad
-                </h2>
-                <p class="leading-relaxed">
-                    En la política, los insultos y ataques dividen más de lo que unen. Frases como "Muerte al PNP" 
-                    o "los PNP son corruptos" pueden apuntar a la institución, pero terminan ofendiendo a personas. 
-                    Mientras nuestro objetivo es arreglar un sistema roto, este lenguaje nos fragmenta y nos impide 
-                    avanzar juntos.
-                </p>
-
-                <p class="leading-relaxed mt-6">
-                    En estas elecciones, la falta de unidad entre quienes buscan un cambio permitió que el PNP 
-                    obtuviera más representación de lo esperado. Peleábamos por lo mismo, pero estábamos divididos. 
-                    En el futuro, debemos construir alianzas más fuertes y atraer a todos los que verdaderamente 
-                    desean un cambio, sin importar su pasado o inclinaciones políticas.
-                </p>
-
-                <p class="leading-relaxed mt-6">
-                    Imagina que la I.A. actúe como un moderador en los debates públicos, reduciendo la polarización 
-                    al ofrecer hechos y eliminando el lenguaje divisivo.
-                </p>
-
-                <p class="leading-relaxed mt-6">
-                    La I.A. podría corregir la desinformación y aportar contexto, ayudando a que la gente vea los 
-                    temas de forma más clara. Con información personalizada para cada ciudadano, podríamos dejar 
-                    atrás la mentalidad de "nosotros contra ellos" y tener una conversación más honesta sobre los 
-                    temas que realmente importan.
-                </p>
-
-                <h2 class="font-montserrat font-semibold text-2xl text-slate-900 mt-12 mb-6">
-                    No son los individuos; es el sistema
-                </h2>
-                <p class="leading-relaxed">
-                    Muchos de los candidatos que entrevisté tienen buenas intenciones, pero el sistema, tal y como 
-                    está, no permite el cambio profundo que Puerto Rico necesita. Nuestra democracia fue originalmente 
-                    construida para servir a unos pocos y, aunque con el tiempo se han ampliado los derechos, su 
-                    estructura sigue siendo anticuada. Un sistema donde 100 o 200 personas toman decisiones para 
-                    millones ya no responde a nuestras necesidades.
-                </p>
-
-                <p class="leading-relaxed mt-6">
-                    La clave aquí es la transparencia. Solo el hecho de que dudemos si las elecciones son limpias, 
-                    o que haya casos de personas fallecidas que aparecen votando, es suficiente para erosionar la 
-                    confianza en el sistema y aumentar el caos social. Necesitamos tecnología que garantice que cada 
-                    voto sea verificable y confiable. Con blockchain, podríamos crear un sistema donde cada voto sea 
-                    seguro y visible, eliminando el riesgo de manipulación. Imagina un proceso donde votemos 
-                    directamente en temas críticos, comó el aborto, desde nuestros dispositivos; con la certeza de 
-                    que cada voto cuenta y puede ser visto por todos.
-                </p>
-
-                <p class="leading-relaxed mt-6">
-                    El sistema representativo actual tampoco está diseñado para atender todos nuestros intereses 
-                    individuales. Los representantes suelen enfocarse en lo que les conviene personalmente para 
-                    ganar votos en su sector y mantenerse en el poder, y muchas veces ni siquiera son conscientes 
-                    de lo que la mayoría realmente necesita. Este enfoque deja de lado temas importantes que 
-                    afectan a todos.
-                </p>
-
-                <blockquote class="border-l-4 border-slate-300 pl-4 my-8 italic text-slate-600">
-                    La democracia, desde sus orígenes en Atenas, solo incluía a un pequeño grupo de descendientes 
-                    atenienses en las decisiones políticas. Con el tiempo, líderes como Martin Luther King y otros 
-                    impulsaron cambios vitales para expandir el derecho al voto. Aunque estos avances fueron 
-                    positivos, la estructura democrática sigue siendo limitada. Un sistema donde 100 o 200 personas 
-                    deciden el futuro de millones no puede responder a todos.
-                </blockquote>
-
-                <p class="leading-relaxed mt-6">
-                    Con una votación directa, los ciudadanos podríamos decidir digitalmente sobre temas importantes 
-                    que impactan nuestras vidas, sin depender solo del juicio de los políticos. La I.A., además, 
-                    nos ayudaría a recibir información educativa y objetiva sobre estos temas. Esto no significa 
-                    que votaríamos en cada ley menor, sino solo en las decisiones más importantes. Así, tendríamos 
-                    un proceso democrático directo y enfocado en lo que realmente importa.
-                </p>
-
-                <!-- "Conclusión" section -->
-                <h2 class="font-montserrat font-semibold text-2xl text-slate-900 mt-12 mb-6">
-                    Conclusión
-                </h2>
-                <p class="leading-relaxed">
-                    Llegamos a un punto donde el sistema que nos prometió representarnos ya no responde a nuestras 
-                    realidades, nuestras necesidades ni a nuestros sueños. Un sistema que deja la educación en 
-                    manos de unos pocos, que nos divide cuando necesitamos unidad, y que concentra el poder en 
-                    unos cuantos mientras nuestras voces se pierden. Voté por la inteligencia artificial porque 
-                    creo en algo mejor, algo que podemos construir juntos.
-                </p>
-
-                <p class="leading-relaxed mt-6">
-                    Imagina una democracia donde cada persona tenga el conocimiento y la oportunidad de decidir 
-                    en temas importantes, donde el poder no esté en unos pocos, sino en todos nosotros. Con 
-                    blockchain, podríamos garantizar que cada voto sea real, visible y honesto. Con la IA, 
-                    podríamos aprender, informarnos y tomar decisiones más sabias. Así, nos uniríamos en lugar 
-                    de enfrentarnos, con transparencia y respeto por cada voz.
-                </p>
-
-                <p class="leading-relaxed mt-6">
-                    He decidido quedarme en Puerto Rico. Ya vi el problema, y este voto es uno de los primeros 
-                    pasos para trabajar hacia su solución. No sé si estaré aquí toda mi vida, pero estaré el 
-                    tiempo suficiente para poner los cimientos y dejar un terreno listo para que otros sigan 
-                    construyendo.
-                </p>
-
-                <p class="leading-relaxed mt-6 text-lg font-medium">
-                    Esta no es una visión lejana ni fría; es una esperanza de recuperar lo que nos hace humanos: 
-                    el derecho a decidir nuestro futuro juntos, sin barreras ni manipulaciones. La inteligencia 
-                    artificial, bien utilizada, no nos aleja de nuestra humanidad; al contrario, puede ser el 
-                    puente que nos lleve hacia una sociedad donde cada decisión refleje quiénes somos y hacia 
-                    dónde queremos ir. Un futuro donde cada voz cuente y donde, por fin, podamos construir algo 
-                    verdaderamente nuestro.
-                </p>
-            </div>
-
-            <!-- Author Bio -->
-            <footer class="mt-16 pt-8 border-t border-slate-200">
-                <div class="flex items-center space-x-4">
-                    <img src="/PROFILE/Joshua_ProfilePicture (1).jpg" 
-                         alt="Joshua Castro" 
-                         class="w-16 h-16 rounded-full">
-                    <div>
-                        <div class="font-medium text-slate-900">Escrito por Joshua Castro</div>
-                        <p class="mt-1 text-slate-600">
-                            Especialista y consultor de IA & Tecnologia con una passión de hacer temas complejos accesibles para todos.
-                        </p>
-                    </div>
-                </div>
-            </footer>
-        </article>
-    </main>
+    <!-- Footer -->
+    <footer>
+        <a href="#contacto">Contacto</a>
+        <a href="#faq">Preguntas Frecuentes</a>
+        <a href="#privacidad">Política de Privacidad</a>
+    </footer>
 </body>
 </html>
