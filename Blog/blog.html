@@ -21,77 +21,83 @@
             font-style: normal;
         }
 
-        @font-face {
-            font-family: 'Montserrat';
-            src: url('../fonts/Montserrat-SemiBold.ttf') format('truetype');
-            font-weight: 600;
-            font-style: normal;
+        body {
+            font-family: 'Source Code Pro', monospace;
+            background-color: #f8fafc;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        .card {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+            padding: 20px;
+            text-align: center;
+            font-family: 'Source Code Pro', monospace;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .card-title {
+            font-family: 'Nebula', sans-serif;
+            font-size: 1.5rem;
+            color: #1e293b;
+            margin-bottom: 10px;
+        }
+
+        .card-description {
+            font-size: 1rem;
+            color: #64748b;
         }
     </style>
-    
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: {
-                        nebula: ['Nebula', 'sans-serif'],
-                        'source-code': ['Source Code Pro', 'monospace'],
-                        montserrat: ['Montserrat', 'sans-serif'],
-                    }
-                }
-            }
-        }
-    </script>
 </head>
-
-<body class="bg-slate-50 font-source-code">
-    <!-- Navigation -->
-    <nav class="fixed top-0 w-full bg-white border-b border-slate-100 z-50">
-        <div class="max-w-2xl mx-auto px-4 h-16 flex items-center justify-center">
-            <div class="flex items-center space-x-12">
-                <a href="/" class="text-slate-900 font-medium hover:text-blue-600 transition-colors">Home</a>
-                <a href="/Blog/blog.html" class="text-slate-900 font-medium hover:text-blue-600 transition-colors">
-                    Blog
-                </a>
-            </div>
+<body>
+    <main class="container">
+        <div class="card">
+            <h2 class="card-title">Título del Blog 1</h2>
+            <p class="card-description">Breve descripción del contenido del blog 1.</p>
         </div>
-    </nav>
-
-    <main class="pt-24 pb-16">
-        <div class="max-w-2xl mx-auto px-4">
-            <!-- Blog Header -->
-            <header class="mb-16">
-                <h1 class="font-nebula text-4xl text-slate-900 mb-4">
-                    Blog
-                </h1>
-                <p class="text-slate-600">
-                    Pensamientos sobre tecnología, IA y el futuro de Puerto Rico
-                </p>
-            </header>
-
-            <!-- Blog Posts List -->
-            <div class="space-y-12">
-                <!-- Blog Post 1 -->
-                <article class="group">
-                    <a href="/" class="block">
-                        <div class="mb-4">
-                            <time datetime="2024-11-12" class="text-sm text-slate-600">
-                                Noviembre 12, 2024
-                            </time>
-                        </div>
-                        <h2 class="font-nebula text-2xl text-slate-900 mb-3 group-hover:text-blue-600 transition-colors">
-                            Por qué voté por la I.A.
-                        </h2>
-                        <p class="text-slate-600 line-clamp-2">
-                            Sí, voté por la inteligencia artificial. No creo que la I.A. sea la respuesta definitiva, 
-                            pero estamos en un momento crítico donde el juicio humano, por sí solo, ya no es suficiente.
-                        </p>
-                    </a>
-                </article>
-
-                <!-- Add more blog posts here as they are created -->
-            </div>
+        <div class="card">
+            <h2 class="card-title">Título del Blog 2</h2>
+            <p class="card-description">Breve descripción del contenido del blog 2.</p>
+        </div>
+        <div class="card">
+            <h2 class="card-title">Título del Blog 3</h2>
+            <p class="card-description">Breve descripción del contenido del blog 3.</p>
+        </div>
+        <div class="card">
+            <h2 class="card-title">Título del Blog 4</h2>
+            <p class="card-description">Breve descripción del contenido del blog 4.</p>
+        </div>
+        <div class="card">
+            <h2 class="card-title">Título del Blog 5</h2>
+            <p class="card-description">Breve descripción del contenido del blog 5.</p>
+        </div>
+        <div class="card">
+            <h2 class="card-title">Título del Blog 6</h2>
+            <p class="card-description">Breve descripción del contenido del blog 6.</p>
+        </div>
+        <div class="card">
+            <h2 class="card-title">Título del Blog 7</h2>
+            <p class="card-description">Breve descripción del contenido del blog 7.</p>
+        </div>
+        <div class="card">
+            <h2 class="card-title">Título del Blog 8</h2>
+            <p class="card-description">Breve descripción del contenido del blog 8.</p>
         </div>
     </main>
 </body>
