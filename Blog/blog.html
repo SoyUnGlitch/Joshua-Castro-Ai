@@ -4,20 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blog - Joshua Castro</title>
-
-     <!-- Navigation - Simplified -->
-     <nav class="fixed top-0 w-full bg-white border-b border-slate-100 z-50">
-        <div class="max-w-2xl mx-auto px-4 h-16 flex items-center justify-center">
-            <div class="flex items-center space-x-12">
-                <a href="/" class="text-slate-900 font-medium hover:text-blue-600 transition-colors">Home</a>
-                <a href="/Blog/blog.html" class="text-slate-600 hover:text-blue-600 transition-colors">Blog</a>
-                <a href="/Events/events.html" class="text-slate-600 hover:text-blue-600 transition-colors">Events</a>
-            </div>
-        </div>
-    </nav>
-
-    <main class="pt-24 pb-16">
-        <article class="max-w-2xl mx-auto px-4">
     
     <!-- Font imports -->
     <style>
@@ -78,8 +64,33 @@
             color: #64748b;
         }
     </style>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        nebula: ['Nebula', 'sans-serif'],
+                        'source-code': ['Source Code Pro', 'monospace'],
+                    }
+                }
+            }
+        }
+    </script>
 </head>
-<body>
+<body class="bg-slate-50 font-source-code">
+    <!-- Navigation - Simplified -->
+    <nav class="fixed top-0 w-full bg-white border-b border-slate-100 z-50">
+        <div class="max-w-2xl mx-auto px-4 h-16 flex items-center justify-center">
+            <div class="flex items-center space-x-12">
+                <a href="/" class="text-slate-900 font-medium hover:text-blue-600 transition-colors">Home</a>
+                <a href="/Blog/blog.html" class="text-slate-600 hover:text-blue-600 transition-colors">Blog</a>
+                <a href="/Events/events.html" class="text-slate-600 hover:text-blue-600 transition-colors">Events</a>
+            </div>
+        </div>
+    </nav>
+
     <main class="container" style="margin-top: 80px;">
         <div class="card">
             <h2 class="card-title">Título del Blog 1</h2>
