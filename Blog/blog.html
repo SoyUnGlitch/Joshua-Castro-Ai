@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - Joshua Castro</title>
+    
+    <!-- Font imports -->
+    <style>
+        @font-face {
+            font-family: 'Nebula';
+            src: url('../fonts/Nebula-Regular.otf') format('opentype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'Source Code Pro';
+            src: url('../fonts/SourceCodePro-Regular.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'Montserrat';
+            src: url('../fonts/Montserrat-SemiBold.ttf') format('truetype');
+            font-weight: 600;
+            font-style: normal;
+        }
+    </style>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        nebula: ['Nebula', 'sans-serif'],
+                        'source-code': ['Source Code Pro', 'monospace'],
+                        montserrat: ['Montserrat', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="bg-slate-50 font-source-code">
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full bg-white border-b border-slate-100 z-50">
+        <div class="max-w-2xl mx-auto px-4 h-16 flex items-center justify-center">
+            <div class="flex items-center space-x-12">
+                <a href="/" class="text-slate-900 font-medium hover:text-blue-600 transition-colors">Home</a>
+                <a href="/Blog/blog.html" class="text-slate-900 font-medium hover:text-blue-600 transition-colors">
+                    Blog
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="pt-24 pb-16">
+        <div class="max-w-2xl mx-auto px-4">
+            <!-- Blog Header -->
+            <header class="mb-16">
+                <h1 class="font-nebula text-4xl text-slate-900 mb-4">
+                    Blog
+                </h1>
+                <p class="text-slate-600">
+                    Pensamientos sobre tecnología, IA y el futuro de Puerto Rico
+                </p>
+            </header>
+
+            <!-- Blog Posts List -->
+            <div class="space-y-12">
+                <!-- Blog Post 1 -->
+                <article class="group">
+                    <a href="/" class="block">
+                        <div class="mb-4">
+                            <time datetime="2024-11-12" class="text-sm text-slate-600">
+                                Noviembre 12, 2024
+                            </time>
+                        </div>
+                        <h2 class="font-nebula text-2xl text-slate-900 mb-3 group-hover:text-blue-600 transition-colors">
+                            Por qué voté por la I.A.
+                        </h2>
+                        <p class="text-slate-600 line-clamp-2">
+                            Sí, voté por la inteligencia artificial. No creo que la I.A. sea la respuesta definitiva, 
+                            pero estamos en un momento crítico donde el juicio humano, por sí solo, ya no es suficiente.
+                        </p>
+                    </a>
+                </article>
+
+                <!-- Add more blog posts here as they are created -->
+            </div>
+        </div>
+    </main>
+</body>
+</html>
