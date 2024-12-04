@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events - Joshua Castro</title>
+    
+    <!-- Font imports -->
+    <style>
+        @font-face {
+            font-family: 'Nebula';
+            src: url('fonts/Nebula-Regular.otf') format('opentype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'Source Code Pro';
+            src: url('fonts/SourceCodePro-Regular.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'Montserrat';
+            src: url('fonts/Montserrat-SemiBold.ttf') format('truetype');
+            font-weight: 600;
+            font-style: normal;
+        }
+    </style>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        nebula: ['Nebula', 'sans-serif'],
+                        'source-code': ['Source Code Pro', 'monospace'],
+                        montserrat: ['Montserrat', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-slate-50 font-source-code">
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full bg-white border-b border-slate-100 z-50">
+        <div class="max-w-2xl mx-auto px-4 h-16 flex items-center justify-center">
+            <div class="flex items-center space-x-12">
+                <a href="/" class="text-slate-900 font-medium hover:text-blue-600 transition-colors">Home</a>
+                <a href="/Blog/blog.html" class="text-slate-600 hover:text-blue-600 transition-colors">Blog</a>
+                <a href="/Events/events.html" class="text-slate-600 hover:text-blue-600 transition-colors">Events</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <main class="min-h-screen flex items-center justify-center">
+        <div class="text-center">
+            <h1 class="font-nebula text-6xl md:text-7xl text-slate-900 mb-4">
+                Pronto
+            </h1>
+            <p class="text-xl md:text-2xl text-slate-600">
+                principios de 2025
+            </p>
+        </div>
+    </main>
+</body>
+</html>
