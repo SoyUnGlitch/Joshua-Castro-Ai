@@ -288,6 +288,31 @@
         .logo-float:nth-child(5) {
             animation-delay: 0.8s;
         }
+
+        /* Section titles */
+        .section h2, 
+        h2.text-4xl,
+        .split-section h2,
+        .module h2 {
+            font-family: 'Nebula', sans-serif;
+        }
+
+        /* Module titles can keep Montserrat for better readability */
+        .module h3 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            color: #1e293b;
+            font-weight: 600;
+        }
+
+        /* Benefits section titles */
+        .flex-col h3 {
+            font-family: 'Nebula', sans-serif;
+            font-size: 2rem;
+            color: #1e293b;
+            margin-bottom: 1.5rem;
+        }
     </style>
     
     <script src="https://cdn.tailwindcss.com"></script>
@@ -339,7 +364,7 @@
         </div>
     </section>
 
-    <!-- Update the section -->
+    <!-- "¿Por qué este curso gratuito?" Section -->
     <section class="py-24 bg-white">
         <div class="max-w-3xl mx-auto px-6">
             <h2 class="text-4xl font-nebula text-slate-800 text-center mb-12">
@@ -509,19 +534,6 @@
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <!-- ¿Para Quién es Este Curso? -->
-    <section class="split-section">
-        <div class="split-section-left">
-            <h2>¿Para quién es este curso?</h2>
-        </div>
-        <div class="split-section-right">
-            <p>Dirigido a maestros que buscan herramientas innovadoras y a estudiantes interesados en aprender de manera eficiente.</p>
-            <button class="bg-slate-900 text-white px-8 py-3 rounded-lg hover:bg-slate-800 transition-colors">
-                Inscríbete ahora
-            </button>
         </div>
     </section>
 
