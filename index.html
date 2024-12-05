@@ -262,6 +262,32 @@
                 text-align: center;
             }
         }
+
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+
+        .logo-float {
+            animation: float 3s ease-in-out infinite;
+        }
+
+        .logo-float:nth-child(2) {
+            animation-delay: 0.2s;
+        }
+
+        .logo-float:nth-child(3) {
+            animation-delay: 0.4s;
+        }
+
+        .logo-float:nth-child(4) {
+            animation-delay: 0.6s;
+        }
+
+        .logo-float:nth-child(5) {
+            animation-delay: 0.8s;
+        }
     </style>
     
     <script src="https://cdn.tailwindcss.com"></script>
@@ -301,14 +327,14 @@
     </section>
 
     <!-- Update the section below hero -->
-    <section class="py-16 bg-slate-900">
+    <section class="py-16" style="background-color: #04050f;">
         <div class="max-w-2xl mx-auto px-4">
             <div class="flex flex-wrap justify-center items-center gap-12">
-                <img src="/ICONS/2.jpg" alt="ChatGPT" class="h-12 w-auto opacity-60 hover:opacity-100 transition-all duration-300 hover:-translate-y-2">
-                <img src="/ICONS/5.png" alt="Runway" class="h-12 w-auto opacity-60 hover:opacity-100 transition-all duration-300 hover:-translate-y-2">
-                <img src="/ICONS/3.png" alt="Claude" class="h-12 w-auto opacity-60 hover:opacity-100 transition-all duration-300 hover:-translate-y-2">
-                <img src="/ICONS/Suno_AI.png" alt="Suno" class="h-12 w-auto opacity-60 hover:opacity-100 transition-all duration-300 hover:-translate-y-2">
-                <img src="/ICONS/Midjourney-logo.jpg" alt="Midjourney" class="h-12 w-auto opacity-60 hover:opacity-100 transition-all duration-300 hover:-translate-y-2">
+                <img src="/ICONS/2.jpg" alt="ChatGPT" class="h-12 w-auto opacity-60 hover:opacity-100 transition-all duration-300 hover:-translate-y-2 logo-float">
+                <img src="/ICONS/5.png" alt="Runway" class="h-12 w-auto opacity-60 hover:opacity-100 transition-all duration-300 hover:-translate-y-2 logo-float">
+                <img src="/ICONS/3.png" alt="Claude" class="h-12 w-auto opacity-60 hover:opacity-100 transition-all duration-300 hover:-translate-y-2 logo-float">
+                <img src="/ICONS/Suno_AI.png" alt="Suno" class="h-12 w-auto opacity-60 hover:opacity-100 transition-all duration-300 hover:-translate-y-2 logo-float">
+                <img src="/ICONS/Midjourney-logo.jpg" alt="Midjourney" class="h-12 w-auto opacity-60 hover:opacity-100 transition-all duration-300 hover:-translate-y-2 logo-float">
             </div>
         </div>
     </section>
@@ -474,7 +500,7 @@
 
     <!-- Beneficios Adicionales -->
     <section class="section">
-        <h2>10 Escuelas Ser��n Seleccionadas para Beneficios Exclusivos</h2>
+        <h2>10 Escuelas Serán Seleccionadas para Beneficios Exclusivos</h2>
         <p>Explica que las escuelas pueden participar enviando un video y serán seleccionadas para recibir soporte adicional.</p>
         <button>Participar Ahora</button>
     </section>
