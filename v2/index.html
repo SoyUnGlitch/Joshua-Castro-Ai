@@ -313,6 +313,21 @@
             color: #1e293b;
             margin-bottom: 1.5rem;
         }
+
+        .btn-cyan {
+            background-color: #33c4db;
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .btn-cyan:hover {
+            background-color: #29a6b8;
+        }
     </style>
     
     <script src="https://cdn.tailwindcss.com"></script>
@@ -348,7 +363,7 @@
     <section class="hero" style="margin-top: 64px; background-image: url('/IMAGES/edu2.png');">
         <h1>Transforma tu Educación con IA</h1>
         <p>Conecta el aprendizaje con las herramientas del futuro</p>
-        <button>¡Inscríbete Gratis!</button>
+        <button class="btn-cyan">¡Inscríbete Gratis!</button>
     </section>
 
     <!-- AI Apps Logos Section -->
@@ -540,19 +555,17 @@
     <!-- Beneficios Adicionales -->
     <section class="section">
         <div class="max-w-6xl mx-auto px-4 flex items-center gap-12">
-            <!-- Image Placeholder -->
+            <!-- Image -->
             <div class="flex-1">
-                <div class="w-full h-64 bg-gray-200 flex items-center justify-center">
-                    <span class="text-gray-500">Imagen</span>
-                </div>
+                <img src="/ICONS/School.png" alt="School" class="w-full h-auto object-contain">
             </div>
             
             <!-- Text Content -->
             <div class="flex-1 text-left">
                 <p class="text-lg text-slate-600">
-                    Explica que las escuelas pueden participar enviando un video y serán seleccionadas para recibir soporte adicional.
+                    8 escuelas serán seleccionadas para recibir un taller gratuito presencial, diseñado especialmente para estudiantes desde nivel elemental hasta superior. Estos talleres ofrecen una experiencia única y práctica que cambiará la manera en que maestros y estudiantes ven la educación. Nuestro objetivo es mostrar cómo la inteligencia artificial puede ser una aliada para aprender, enseñar y crear juntos.
                 </p>
-                <button class="mt-4 bg-slate-900 text-white px-8 py-3 rounded-lg hover:bg-slate-800 transition-colors">
+                <button class="mt-4 btn-cyan">
                     Participar Ahora
                 </button>
             </div>
