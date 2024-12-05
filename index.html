@@ -29,13 +29,34 @@
         }
 
         .hero {
-            background-image: url('images/edu hero.png');
+            background-image: url('../images/edu hero.png');
             background-size: cover;
             background-position: center;
             color: white;
             text-align: center;
             padding: 100px 20px;
             position: relative;
+            min-height: 80vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 1;
+        }
+
+        .hero h1, .hero p, .hero button {
+            position: relative;
+            z-index: 2;
         }
 
         .hero h1 {
@@ -136,35 +157,10 @@
             text-decoration: none;
         }
     </style>
-    
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: {
-                        nebula: ['Nebula', 'sans-serif'],
-                        'source-code': ['Source Code Pro', 'monospace'],
-                    }
-                }
-            }
-        }
-    </script>
 </head>
-<body class="bg-slate-50 font-source-code">
-    <!-- Navigation - Simplified -->
-    <nav class="fixed top-0 w-full bg-white border-b border-slate-100 z-50">
-        <div class="max-w-2xl mx-auto px-4 h-16 flex items-center justify-center">
-            <div class="flex items-center space-x-12">
-                <a href="/" class="text-slate-900 font-medium hover:text-blue-600 transition-colors">Home</a>
-                <a href="/Blog/blog.html" class="text-slate-600 hover:text-blue-600 transition-colors">Blog</a>
-                <a href="/Events/events.html" class="text-slate-600 hover:text-blue-600 transition-colors">Events</a>
-            </div>
-        </div>
-    </nav>
-
+<body>
     <!-- Hero Banner -->
-    <section class="hero" style="margin-top: 64px;">
+    <section class="hero">
         <h1>Transforma la Educación con Inteligencia Artificial</h1>
         <p>Un curso gratuito para maestros y estudiantes que conecta el aprendizaje con las herramientas del futuro</p>
         <button>¡Inscríbete Gratis!</button>
