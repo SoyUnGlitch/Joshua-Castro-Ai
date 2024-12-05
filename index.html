@@ -50,7 +50,7 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: rgba(0, 0, 0, 0.5);
+            background: rgba(0, 0, 0, 0.6);
             z-index: 1;
         }
 
@@ -68,16 +68,22 @@
         .hero p {
             font-size: 1.5rem;
             margin-bottom: 30px;
+            max-width: 800px;
         }
 
         .hero button {
             background-color: #1e293b;
             color: white;
-            padding: 10px 20px;
+            padding: 15px 30px;
             border: none;
             border-radius: 5px;
-            font-size: 1rem;
+            font-size: 1.1rem;
             cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .hero button:hover {
+            background-color: #334155;
         }
 
         .section {
@@ -186,7 +192,7 @@
 
     <!-- Hero Banner -->
     <section class="hero" style="margin-top: 64px;">
-        <h1>Transforma la Educación con Inteligencia Artificial</h1>
+        <h1>Transforma tu Educación con Inteligencia Artificial</h1>
         <p>Un curso gratuito para maestros y estudiantes que conecta el aprendizaje con las herramientas del futuro</p>
         <button>¡Inscríbete Gratis!</button>
     </section>
