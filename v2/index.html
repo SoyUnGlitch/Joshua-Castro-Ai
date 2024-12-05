@@ -328,6 +328,24 @@
         .btn-cyan:hover {
             background-color: #29a6b8;
         }
+
+        /* Add these responsive styles */
+        @media (max-width: 768px) {
+            .section {
+                padding: 40px 20px;
+            }
+            
+            .section img {
+                max-width: 80%;
+                margin: 0 auto;
+            }
+            
+            .btn-cyan {
+                width: 100%;
+                max-width: 300px;
+                margin: 0 auto;
+            }
+        }
     </style>
     
     <script src="https://cdn.tailwindcss.com"></script>
@@ -353,8 +371,8 @@
                 <img src="/Logos/SUG_Logomark_ChromedBlue.png" alt="SUG" class="h-8 w-auto">
             </a>
             <div class="absolute left-1/2 transform -translate-x-1/2 flex items-center space-x-12">
-                <a href="/Blog/blog.html" class="text-slate-600 hover:text-blue-600 transition-colors">Blog</a>
-                <a href="/Events/events.html" class="text-slate-600 hover:text-blue-600 transition-colors">Eventos</a>
+                <a href="/Blog/index.html" class="text-slate-600 hover:text-blue-600 transition-colors">Blog</a>
+                <a href="/Eventos/index.html" class="text-slate-600 hover:text-blue-600 transition-colors">Eventos</a>
             </div>
         </div>
     </nav>
@@ -554,20 +572,22 @@
 
     <!-- Beneficios Adicionales -->
     <section class="section">
-        <div class="max-w-6xl mx-auto px-4 flex items-center gap-12">
-            <!-- Image -->
-            <div class="flex-1">
-                <img src="/ICONS/School.png" alt="School" class="w-full h-auto object-contain">
-            </div>
-            
-            <!-- Text Content -->
-            <div class="flex-1 text-left">
-                <p class="text-lg text-slate-600">
-                    8 escuelas serán seleccionadas para recibir un taller gratuito presencial, diseñado especialmente para estudiantes desde nivel elemental hasta superior. Estos talleres ofrecen una experiencia única y práctica que cambiará la manera en que maestros y estudiantes ven la educación. Nuestro objetivo es mostrar cómo la inteligencia artificial puede ser una aliada para aprender, enseñar y crear juntos.
-                </p>
-                <button class="mt-4 btn-cyan">
-                    Participar Ahora
-                </button>
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="flex flex-col md:flex-row items-center gap-12">
+                <!-- Image -->
+                <div class="w-full md:w-1/2">
+                    <img src="/ICONS/School.png" alt="School" class="w-full h-auto object-contain mx-auto max-w-md">
+                </div>
+                
+                <!-- Text Content -->
+                <div class="w-full md:w-1/2 text-center md:text-left">
+                    <p class="text-lg text-slate-600 mb-6">
+                        Explica que las escuelas pueden participar enviando un video y serán seleccionadas para recibir soporte adicional.
+                    </p>
+                    <button class="btn-cyan">
+                        Participar Ahora
+                    </button>
+                </div>
             </div>
         </div>
     </section>
